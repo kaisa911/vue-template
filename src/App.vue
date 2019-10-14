@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     欢迎使用Vue，详情请见 https://github.com/kaisa911
-    <router-link />
+    <router-link to="/" />
   </div>
 </template>
 
