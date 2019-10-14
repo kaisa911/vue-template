@@ -9,13 +9,23 @@ const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length });
 // const vendorPath = '';
 
 const config = {
-  entry: ['babel-polyfill', path.join(__dirname, '../src/main.js')],
+  entry: ['babel-polyfill', path.join(__dirname, '../src/main.js')], // 理论上可以兼容ie8
   output: {
     path: path.join(__dirname, '../dist'), // 所有的文件都输出到dist/目录下
     filename: 'js/bundle.[hash].js', // 每次保存 hash 都变化
   },
   module: {
     rules: [
+      {
+        test: /\.(js|vue)$/,
+        loader: 'eslint-loader',
+        enforce: 'pre',
+        exclude: /node_modules/,
+        options: {
+          formatter: require('eslint-friendly-formatter'),
+          fix: true, // 自动修复
+        }
+      },
       {
         // 使用vue-loader解析.vue文件
         test: /\.vue$/,

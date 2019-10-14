@@ -1,13 +1,16 @@
 <template>
   <div id="app">
-    hello world大大hahah
-    <router-link></router-link>
+    hello world大大{{ hahha }}
+    <router-link />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app'
+  name: 'App',
+  data: () => ({
+    hahha: 23232, // 2323
+  }),
 };
 </script>
 
@@ -22,4 +25,3 @@ export default {
   transform: rotate(0deg);
 }
 </style>
-

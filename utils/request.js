@@ -35,7 +35,7 @@ function get(
     headers: {
       'X-Requested-With': 'XMLHttpRequest',
     },
-  },
+  }
 ) {
   return axios({
     method: 'get',
@@ -61,7 +61,7 @@ export function requestForm(
     headers: {
       'Content-Type': 'multipart/form-data',
     },
-  },
+  }
 ) {
   const form = new FormData();
   Object.keys(reqData).forEach(item => {
