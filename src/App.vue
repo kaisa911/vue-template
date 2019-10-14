@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    hello world大大{{ hahha }}
+    hello world大大{{ hahha }}, hhah
     <router-link />
   </div>
 </template>
@@ -9,8 +9,8 @@
 export default {
   name: 'App',
   data: () => ({
-    hahha: 23232, // 2323
-  }),
+    hahha: 23232 // 2323
+  })
 };
 </script>
 
