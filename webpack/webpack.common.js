@@ -1,7 +1,6 @@
 const path = require('path');
 // const webpack = require('webpack');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // 大坑
 const HappyPack = require('happypack');
 const os = require('os');

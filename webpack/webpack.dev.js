@@ -19,6 +19,7 @@ const config = {
     stats: 'minimal',
     compress: true,
   },
+  // 拆分代码
   optimization: {
     splitChunks: {
       chunks: 'all',
@@ -34,7 +35,8 @@ const config = {
   },
   plugins: [
     ...common.plugins,
-    new webpack.HotModuleReplacementPlugin(),
+    new webpack.HotModuleReplacementPlugin(), // 热更新插件
+    // html，把js注入到html里
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: path.resolve(__dirname, '../src/index.html'),
