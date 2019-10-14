@@ -12,7 +12,7 @@ module.exports = {
     commonjs: true,
     es6: true,
   },
-  plugins: ['prettier', 'html', 'vue'],
+  plugins: ['html', 'vue', 'prettier'],
   rules: {
     'prettier/prettier': [
       'warn',

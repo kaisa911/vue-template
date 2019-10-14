@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    hello world大大{{ hahha }}, hhah
+    欢迎使用Vue
     <router-link />
   </div>
 </template>
@@ -8,9 +8,7 @@
 <script>
 export default {
   name: 'App',
-  data: () => ({
-    hahha: 23232, // 2323
-  }),
+  data: () => ({}),
 };
 </script>
 
