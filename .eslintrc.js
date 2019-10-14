@@ -15,7 +15,7 @@ module.exports = {
   plugins: ['html', 'vue', 'prettier'],
   rules: {
     'prettier/prettier': [
-      'warn',
+      'error',
       {
         singleQuote: true,
         trailingComma: 'es5',

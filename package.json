@@ -4,10 +4,11 @@
   "description": "a framework of vue",
   "main": "main.js",
   "scripts": {
-    "precommit": "npm run lint",
+    "precommit": "npm run eslint",
+    "eslint": "eslint --ext .js,.vue src",
     "start": "webpack-dev-server --color --config ./webpack/webpack.dev.js",
     "build": "webpack  --progress --config  ./webpack/webpack.prod.js",
-    "lint": "eslint --ext .js,.vue --fix src"
+    "lint": "eslint --ext .js,.vue --fix src && eslint --ext .js,.vue --fix utils"
   },
   "keywords": [
     "vue",
