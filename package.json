@@ -4,7 +4,7 @@
   "description": "a framework of vue",
   "main": "main.js",
   "scripts": {
-    "pre-commit": "npm run lint",
+    "precommit": "npm run lint",
     "start": "webpack-dev-server --color --config ./webpack/webpack.dev.js",
     "build": "webpack  --progress --config  ./webpack/webpack.prod.js",
     "lint": "eslint --ext .js,.vue --fix src"
