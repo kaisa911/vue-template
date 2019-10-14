@@ -6,7 +6,7 @@
   "scripts": {
     "precommit": "npm run eslint",
     "prepush": "npm run eslint",
-    "eslint": "eslint --ext .js,.vue src",
+    "eslint": "eslint --ext .js,.vue src && eslint --ext .js,.vue utils",
     "start": "webpack-dev-server --color --config ./webpack/webpack.dev.js",
     "build": "webpack  --progress --config  ./webpack/webpack.prod.js",
     "lint": "eslint --ext .js,.vue --fix src && eslint --ext .js,.vue --fix utils"
