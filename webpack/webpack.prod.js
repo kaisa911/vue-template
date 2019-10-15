@@ -1,7 +1,4 @@
 const common = require('./webpack.common');
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyjsWebpackPlugin = require('uglifyjs-webpack-plugin');
@@ -44,18 +41,8 @@ const config = {
 
   plugins: [
     ...common.plugins,
-    new webpack.HotModuleReplacementPlugin(),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: path.resolve(__dirname, '../src/index.html'),
-      inject: true,
-      templateParameters: {
-        title: '框架demo',
-      },
-      favicon: path.resolve(__dirname, '../public/favicon.ico'),
     }),
   ],
 };

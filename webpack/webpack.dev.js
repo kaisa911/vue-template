@@ -1,7 +1,5 @@
 const common = require('./webpack.common');
-const path = require('path');
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
   ...common,
@@ -36,16 +34,6 @@ const config = {
   plugins: [
     ...common.plugins,
     new webpack.HotModuleReplacementPlugin(), // 热更新插件
-    // html，把js注入到html里
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: path.resolve(__dirname, '../src/index.html'),
-      inject: true,
-      templateParameters: {
-        title: '框架demo',
-      },
-      favicon: path.resolve(__dirname, '../public/favicon.ico'),
-    }),
   ],
 };
 

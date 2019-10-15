@@ -3,6 +3,7 @@ const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // 大坑
 const HappyPack = require('happypack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const os = require('os');
 const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length });
 
@@ -24,7 +25,7 @@ const config = {
         options: {
           formatter: require('eslint-friendly-formatter'),
           fix: true, // 自动修复
-        }
+        },
       },
       {
         // 使用vue-loader解析.vue文件
@@ -57,6 +58,15 @@ const config = {
       threadPool: happyThreadPool,
       //允许 HappyPack 输出日志
       verbose: true,
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: path.resolve(__dirname, '../src/index.html'),
+      inject: true,
+      templateParameters: {
+        title: '框架demo',
+      },
+      favicon: path.resolve(__dirname, '../public/favicon.ico'),
     }),
   ],
 };
