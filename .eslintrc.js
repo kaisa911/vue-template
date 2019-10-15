@@ -23,5 +23,9 @@ module.exports = {
         jsxBracketSameLine: true,
       },
     ],
+    complexity: [
+      'warn',
+      { max: 4 }
+    ]
   },
 };
