@@ -8,7 +8,7 @@
 export default {
   name: 'Index',
   components: {
-    HelloVue: () => import('../components/helloVue.vue'),
+    HelloVue: () => import('../components/HelloVue/helloVue.vue'),
   },
 };
 </script>
