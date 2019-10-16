@@ -44,6 +44,11 @@ const config = {
       },
     ],
   },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src/'),
+    },
+  },
 
   plugins: [
     new VueLoaderPlugin(), // 最新版的vue-loader需要配置插件
